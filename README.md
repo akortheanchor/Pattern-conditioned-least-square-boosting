@@ -1,6 +1,7 @@
 # PC-LSB — Pattern-Conditioned Least-Square Boost
 
 Code, results, figures and animations for the study *"PC-LSB: Pattern-Conditioned Least-Square Boost for Under-Sampled Medical Signals and Images — with a reproducible audit of Maximum Accuracy Computing"*.
+<img width="1188" height="247" alt="G1_ultrasound_video_reconstruction" src="https://github.com/user-attachments/assets/7ea8e15f-7740-4fdf-9002-61404ce477b7" />
 
 ## Layout
 ```
