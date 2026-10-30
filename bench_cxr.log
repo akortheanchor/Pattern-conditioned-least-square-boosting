@@ -1,0 +1,83 @@
+=== cxr r=2 (rate 0.2500) train=485 val=75 test=221 p=7
+  LMMSE fit 2.0s
+  srcnn step 0 loss 4.900e-02 (3s)
+  srcnn step 500 loss 4.120e-04 (56s)
+  srcnn step 1000 loss 3.377e-04 (111s)
+  srcnn step 1500 loss 2.411e-03 (220s)
+  srcnn early-stopping: best val MSE 7.842e-04 at step 2000
+  SRCNN fit 329.8s
+  vdsr step 0 loss 7.901e-04 (8s)
+  vdsr step 500 loss 3.990e-04 (308s)
+  vdsr step 1000 loss 3.193e-04 (588s)
+=== cxr r=2 (rate 0.2500) train=485 val=75 test=221 p=7
+  LMMSE fit 1.9s
+  SRCNN loaded from checkpoint
+  SRCNN fit 0.2s
+  vdsr step 0 loss 7.901e-04 (6s)
+  vdsr step 500 loss 3.990e-04 (166s)
+  vdsr step 1000 loss 3.193e-04 (316s)
+  vdsr step 1500 loss 2.276e-03 (468s)
+  vdsr early-stopping: best val MSE 7.292e-04 at step 2000
+  VDSR fit 620.9s
+  PC-LSB seed 0 fit 145.9s gammas=[[0.67, 0.99, 1.0, 0.82, 0.38, 0.02], [0.34, 0.56, 0.7, 0.45, 0.2, 0.01]] cal=0.786 anchor=mac
+  PC-LSB seed 1 fit 137.1s gammas=[[0.68, 1.0, 1.0, 0.82, 0.38, 0.06], [0.27, 0.56, 0.74, 0.44, 0.22, 0.0]] cal=0.822 anchor=mac
+  PC-LSB seed 2 fit 137.2s gammas=[[0.66, 0.99, 1.0, 0.82, 0.38, 0.04], [0.44, 0.53, 0.67, 0.42, 0.2, 0.04]] cal=0.815 anchor=mac
+  [0/221] PC-LSB:38.02 | Tikhonov:37.99 | VDSR:37.83 | Lanczos-3:37.70 | SRCNN:37.67 | Linear:37.57 | Cubic spline:37.43 | CS-TV:34.73 | OMP-DCT:32.44 | Nearest:32.03 | LMMSE (learned linear):29.03 | CS-Wavelet:27.89 | MAC (RFT):27.87 | Zero-fill:4.90
+  [50/221] PC-LSB:33.60 | Tikhonov:33.32 | VDSR:33.31 | Linear:33.06 | SRCNN:33.05 | Lanczos-3:32.93 | Cubic spline:32.76 | CS-TV:30.97 | OMP-DCT:28.88 | LMMSE (learned linear):28.66 | Nearest:28.19 | MAC (RFT):27.71 | CS-Wavelet:26.41 | Zero-fill:5.12
+  [100/221] PC-LSB:33.52 | VDSR:33.32 | Tikhonov:33.26 | SRCNN:33.04 | Linear:32.99 | Lanczos-3:32.89 | Cubic spline:32.74 | CS-TV:30.93 | OMP-DCT:28.80 | LMMSE (learned linear):28.74 | Nearest:28.17 | MAC (RFT):27.80 | CS-Wavelet:26.36 | Zero-fill:5.06
+  [150/221] PC-LSB:33.12 | VDSR:32.91 | Tikhonov:32.85 | SRCNN:32.64 | Linear:32.59 | Lanczos-3:32.49 | Cubic spline:32.34 | CS-TV:30.56 | LMMSE (learned linear):28.61 | OMP-DCT:28.45 | Nearest:27.81 | MAC (RFT):27.69 | CS-Wavelet:26.19 | Zero-fill:5.03
+  [200/221] PC-LSB:33.31 | VDSR:33.05 | Tikhonov:33.03 | SRCNN:32.77 | Linear:32.76 | Lanczos-3:32.67 | Cubic spline:32.48 | CS-TV:30.67 | LMMSE (learned linear):28.72 | OMP-DCT:28.54 | Nearest:27.93 | MAC (RFT):27.80 | CS-Wavelet:26.29 | Zero-fill:5.03
+                                q      time
+method                                     
+PC-LSB                  33.334572  0.217407
+VDSR                    33.084220  0.029886
+Tikhonov                33.054526  0.055818
+SRCNN                   32.804608  0.013445
+Linear                  32.780353  0.008376
+Lanczos-3               32.691990  0.008206
+Cubic spline            32.513364  0.003438
+CS-TV                   30.696466  0.139670
+LMMSE (learned linear)  28.735787  0.010150
+OMP-DCT                 28.564100  1.911200
+Nearest                 27.955578  0.008655
+MAC (RFT)               27.810015  0.000699
+CS-Wavelet              26.294257  0.146375
+Zero-fill                5.046364  0.000019
+=== cxr r=4 (rate 0.0625) train=485 val=75 test=221 p=7
+  LMMSE fit 2.5s
+  srcnn step 0 loss 5.019e-02 (3s)
+  srcnn step 500 loss 1.371e-03 (57s)
+  srcnn step 1000 loss 1.118e-03 (108s)
+  srcnn step 1500 loss 3.861e-03 (157s)
+  srcnn early-stopping: best val MSE 2.485e-03 at step 2000
+  SRCNN fit 209.7s
+  vdsr step 0 loss 2.142e-03 (4s)
+  vdsr step 500 loss 1.367e-03 (146s)
+  vdsr step 1000 loss 1.106e-03 (290s)
+  vdsr step 1500 loss 3.724e-03 (435s)
+  vdsr early-stopping: best val MSE 2.450e-03 at step 1750
+  VDSR fit 578.8s
+  PC-LSB seed 0 fit 162.1s gammas=[[0.96, 0.99, 0.58, 0.37, 0.14, 0.0], [0.53, 0.5, 0.19, 0.16, 0.07, 0.02]] cal=0.494 anchor=mac
+  PC-LSB seed 1 fit 160.2s gammas=[[0.97, 0.99, 0.6, 0.38, 0.14, 0.01], [1.11, 0.68, 0.3, 0.17, 0.08, 0.02]] cal=0.485 anchor=mac
+  PC-LSB seed 2 fit 160.2s gammas=[[0.96, 0.98, 0.56, 0.35, 0.12, 0.0], [0.82, 0.52, 0.24, 0.16, 0.07, 0.01]] cal=0.362 anchor=mac
+  [0/221] Tikhonov:32.12 | PC-LSB:32.11 | Linear:31.85 | Lanczos-3:31.81 | VDSR:31.62 | SRCNN:31.53 | Cubic spline:31.25 | Nearest:28.22 | CS-TV:26.66 | OMP-DCT:25.86 | LMMSE (learned linear):24.77 | CS-Wavelet:23.05 | MAC (RFT):22.77 | Zero-fill:3.94
+  [50/221] PC-LSB:28.03 | Tikhonov:27.95 | Linear:27.73 | Lanczos-3:27.61 | VDSR:27.42 | SRCNN:27.35 | Cubic spline:27.05 | Nearest:24.68 | LMMSE (learned linear):24.30 | CS-TV:23.34 | OMP-DCT:22.85 | MAC (RFT):22.77 | CS-Wavelet:22.27 | Zero-fill:4.15
+  [100/221] PC-LSB:27.97 | Tikhonov:27.88 | Linear:27.69 | Lanczos-3:27.56 | VDSR:27.47 | SRCNN:27.40 | Cubic spline:27.11 | Nearest:24.64 | LMMSE (learned linear):24.35 | CS-TV:23.45 | OMP-DCT:22.85 | MAC (RFT):22.82 | CS-Wavelet:22.29 | Zero-fill:4.09
+  [150/221] PC-LSB:27.62 | Tikhonov:27.52 | Linear:27.32 | Lanczos-3:27.20 | VDSR:27.12 | SRCNN:27.05 | Cubic spline:26.75 | Nearest:24.30 | LMMSE (learned linear):24.24 | CS-TV:23.16 | MAC (RFT):22.76 | OMP-DCT:22.59 | CS-Wavelet:22.21 | Zero-fill:4.07
+  [200/221] PC-LSB:27.68 | Tikhonov:27.60 | Linear:27.41 | Lanczos-3:27.29 | VDSR:27.14 | SRCNN:27.08 | Cubic spline:26.79 | Nearest:24.36 | LMMSE (learned linear):24.32 | CS-TV:23.19 | MAC (RFT):22.83 | OMP-DCT:22.57 | CS-Wavelet:22.24 | Zero-fill:4.06
+                                q      time
+method                                     
+PC-LSB                  27.706043  0.239671
+Tikhonov                27.625856  0.136105
+Linear                  27.434964  0.007762
+Lanczos-3               27.316412  0.008629
+VDSR                    27.193174  0.036246
+SRCNN                   27.123141  0.016378
+Cubic spline            26.840845  0.003692
+Nearest                 24.399104  0.007857
+LMMSE (learned linear)  24.326077  0.015955
+CS-TV                   23.230235  0.147002
+MAC (RFT)               22.829949  0.000715
+OMP-DCT                 22.611561  0.172218
+CS-Wavelet              22.252044  0.175232
+Zero-fill                4.080136  0.000045

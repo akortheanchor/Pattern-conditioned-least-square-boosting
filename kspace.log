@@ -1,0 +1,125 @@
+=== accel 4 mask lowpass rate 0.258
+  srcnn step 0 loss 2.162e-02 (3s)
+  srcnn step 500 loss 4.600e-03 (60s)
+  srcnn step 1000 loss 4.345e-03 (120s)
+  srcnn early-stopping: best val MSE 2.860e-03 at step 1500
+  vdsr step 0 loss 4.178e-03 (6s)
+  vdsr step 500 loss 4.194e-03 (158s)
+  vdsr step 1000 loss 3.737e-03 (312s)
+  vdsr early-stopping: best val MSE 2.588e-03 at step 1500
+  learned models fit in 987s; gammas [[0.0, 0.97, 0.64, 0.27, 0.08, 0.01], [0.0, 0.64, 0.48, 0.25, 0.08, 0.0]]
+  [0] VDSR:22.71 | SRCNN:22.41 | PC-LSB:21.78 | CS-TV:21.71 | Tikhonov:21.16 | LMMSE (learned linear):21.14 | Zero-fill / MAC:21.14 | CS-Wavelet:20.68 | Hann-filtered ZF:18.63
+  [60] VDSR:25.25 | SRCNN:24.89 | CS-TV:24.83 | PC-LSB:24.73 | Tikhonov:24.29 | LMMSE (learned linear):24.29 | Zero-fill / MAC:24.29 | CS-Wavelet:23.74 | Hann-filtered ZF:21.02
+  [120] VDSR:25.33 | SRCNN:24.92 | CS-TV:24.86 | PC-LSB:24.76 | Tikhonov:24.29 | LMMSE (learned linear):24.28 | Zero-fill / MAC:24.28 | CS-Wavelet:23.68 | Hann-filtered ZF:20.85
+  [180] VDSR:25.61 | CS-TV:25.31 | SRCNN:25.13 | PC-LSB:24.97 | Tikhonov:24.47 | LMMSE (learned linear):24.46 | Zero-fill / MAC:24.45 | CS-Wavelet:23.89 | Hann-filtered ZF:21.07
+                                q      ssim    cls_ok      time
+method                                                         
+VDSR                    25.450585  0.868588  0.591667  0.039623
+CS-TV                   25.075501  0.871777  0.545833  0.510455
+SRCNN                   24.999603  0.855457  0.579167  0.015857
+PC-LSB                  24.829722  0.851447  0.579167  0.261150
+Tikhonov                24.362952  0.831404  0.604167  0.210130
+LMMSE (learned linear)  24.343929  0.829669  0.629167  0.020297
+Zero-fill / MAC         24.338992  0.829626  0.629167  0.000992
+CS-Wavelet              23.767916  0.820603  0.587500  0.318795
+Hann-filtered ZF        21.051444  0.727142  0.379167  0.001434
+=== accel 4 mask equispaced rate 0.258
+  srcnn step 0 loss 2.857e-02 (3s)
+  srcnn step 500 loss 1.130e-02 (65s)
+  srcnn step 1000 loss 1.225e-02 (126s)
+  srcnn early-stopping: best val MSE 8.019e-03 at step 1500
+  vdsr step 0 loss 1.114e-02 (6s)
+  vdsr step 500 loss 9.974e-03 (167s)
+  vdsr step 1000 loss 1.048e-02 (450s)
+  vdsr early-stopping: best val MSE 6.785e-03 at step 1500
+  learned models fit in 1234s; gammas [[1.4, 1.06, 0.49, 0.16, 0.04, 0.01], [1.31, 0.87, 0.47, 0.2, 0.04, 0.0]]
+  [0] VDSR:19.80 | CS-TV:19.00 | SRCNN:18.98 | PC-LSB:18.71 | LMMSE (learned linear):17.88 | Zero-fill / MAC:17.88 | Tikhonov:17.86 | Hann-filtered ZF:17.82 | CS-Wavelet:16.18
+  [60] VDSR:20.91 | CS-TV:20.74 | SRCNN:20.40 | PC-LSB:20.36 | LMMSE (learned linear):19.59 | Zero-fill / MAC:19.59 | Tikhonov:19.58 | Hann-filtered ZF:19.52 | CS-Wavelet:17.92
+  [120] VDSR:20.68 | CS-TV:20.45 | SRCNN:20.15 | PC-LSB:20.10 | Tikhonov:19.35 | LMMSE (learned linear):19.34 | Zero-fill / MAC:19.34 | Hann-filtered ZF:19.27 | CS-Wavelet:17.65
+  [180] VDSR:21.00 | CS-TV:20.97 | SRCNN:20.42 | PC-LSB:20.41 | Tikhonov:19.59 | LMMSE (learned linear):19.58 | Zero-fill / MAC:19.58 | Hann-filtered ZF:19.50 | CS-Wavelet:17.90
+                                q      ssim    cls_ok      time
+method                                                         
+VDSR                    20.954803  0.638774  0.475000  0.038067
+CS-TV                   20.838436  0.660054  0.437500  0.476926
+SRCNN                   20.393875  0.611469  0.445833  0.015232
+PC-LSB                  20.377623  0.608032  0.412500  0.247296
+Tikhonov                19.625044  0.570188  0.425000  0.260192
+LMMSE (learned linear)  19.614587  0.572282  0.420833  0.019339
+Zero-fill / MAC         19.612715  0.572232  0.420833  0.001027
+Hann-filtered ZF        19.535870  0.573026  0.383333  0.001255
+CS-Wavelet              17.976733  0.489347  0.366667  0.305248
+=== accel 4 mask vardens rate 0.258
+  srcnn step 0 loss 2.519e-02 (3s)
+  srcnn step 500 loss 8.083e-03 (60s)
+  srcnn step 1000 loss 7.750e-03 (117s)
+  srcnn early-stopping: best val MSE 4.842e-03 at step 1500
+  vdsr step 0 loss 7.967e-03 (5s)
+  vdsr step 500 loss 7.018e-03 (169s)
+  vdsr step 1000 loss 6.025e-03 (332s)
+  vdsr early-stopping: best val MSE 4.004e-03 at step 1250
+  learned models fit in 930s; gammas [[0.99, 0.72, 0.53, 0.3, 0.05, 0.02], [0.73, 0.52, 0.44, 0.28, 0.06, 0.0]]
+  [0] CS-TV:24.23 | VDSR:23.55 | SRCNN:21.65 | PC-LSB:20.12 | CS-Wavelet:19.60 | Zero-fill / MAC:19.20 | LMMSE (learned linear):19.20 | Tikhonov:19.18 | Hann-filtered ZF:18.73
+  [60] CS-TV:24.16 | VDSR:23.53 | SRCNN:22.66 | PC-LSB:22.08 | LMMSE (learned linear):21.24 | Zero-fill / MAC:21.24 | Tikhonov:21.23 | CS-Wavelet:20.93 | Hann-filtered ZF:20.83
+  [120] CS-TV:24.10 | VDSR:23.38 | SRCNN:22.48 | PC-LSB:21.90 | Tikhonov:21.05 | LMMSE (learned linear):21.04 | Zero-fill / MAC:21.04 | CS-Wavelet:20.72 | Hann-filtered ZF:20.65
+  [180] CS-TV:24.60 | VDSR:23.72 | SRCNN:22.75 | PC-LSB:22.18 | Tikhonov:21.29 | LMMSE (learned linear):21.28 | Zero-fill / MAC:21.28 | CS-Wavelet:20.97 | Hann-filtered ZF:20.88
+                                q      ssim    cls_ok      time
+method                                                         
+CS-TV                   24.322774  0.787589  0.516667  0.469971
+VDSR                    23.609885  0.740192  0.541667  0.038061
+SRCNN                   22.674301  0.704741  0.504167  0.014040
+PC-LSB                  22.132787  0.681024  0.487500  0.253252
+Tikhonov                21.303250  0.645173  0.425000  0.252445
+LMMSE (learned linear)  21.292378  0.645669  0.450000  0.019748
+Zero-fill / MAC         21.289745  0.645592  0.450000  0.001004
+CS-Wavelet              20.952740  0.631307  0.462500  0.305721
+Hann-filtered ZF        20.885791  0.651940  0.425000  0.001215
+=== accel 8 mask lowpass rate 0.133
+  srcnn step 0 loss 2.648e-02 (4s)
+  srcnn step 500 loss 9.633e-03 (60s)
+  srcnn step 1000 loss 1.003e-02 (120s)
+  srcnn early-stopping: best val MSE 6.316e-03 at step 1500
+  vdsr step 0 loss 9.422e-03 (7s)
+  vdsr step 500 loss 8.945e-03 (167s)
+  vdsr step 1000 loss 9.086e-03 (333s)
+  vdsr early-stopping: best val MSE 5.813e-03 at step 1500
+  learned models fit in 930s; gammas [[0.69, 0.87, 0.35, 0.06, 0.0, 0.0], [0.42, 0.77, 0.31, 0.08, 0.03, 0.0]]
+  [0] VDSR:19.51 | SRCNN:19.05 | PC-LSB:18.37 | Zero-fill / MAC:18.21 | LMMSE (learned linear):18.20 | CS-TV:18.15 | Tikhonov:17.92 | CS-Wavelet:17.70 | Hann-filtered ZF:16.82
+  [60] VDSR:21.45 | SRCNN:21.28 | CS-TV:21.03 | PC-LSB:20.92 | LMMSE (learned linear):20.63 | Zero-fill / MAC:20.63 | Tikhonov:20.59 | CS-Wavelet:20.02 | Hann-filtered ZF:18.37
+  [120] VDSR:21.30 | SRCNN:21.11 | CS-TV:20.86 | PC-LSB:20.75 | LMMSE (learned linear):20.45 | Zero-fill / MAC:20.45 | Tikhonov:20.42 | CS-Wavelet:19.81 | Hann-filtered ZF:18.12
+  [180] VDSR:21.62 | SRCNN:21.36 | CS-TV:21.26 | PC-LSB:20.97 | LMMSE (learned linear):20.68 | Zero-fill / MAC:20.67 | Tikhonov:20.63 | CS-Wavelet:20.03 | Hann-filtered ZF:18.34
+                                q      ssim    cls_ok      time
+method                                                         
+VDSR                    21.542581  0.712889  0.429167  0.037128
+SRCNN                   21.298928  0.697979  0.433333  0.014483
+CS-TV                   21.159266  0.718415  0.425000  0.454384
+PC-LSB                  20.947908  0.683376  0.391667  0.255033
+LMMSE (learned linear)  20.669400  0.661560  0.395833  0.018472
+Zero-fill / MAC         20.665704  0.661492  0.400000  0.000757
+Tikhonov                20.640926  0.663140  0.383333  0.248120
+CS-Wavelet              20.026884  0.628399  0.433333  0.296212
+Hann-filtered ZF        18.386762  0.554493  0.295833  0.001292
+=== accel 8 mask vardens rate 0.133
+  srcnn step 0 loss 2.787e-02 (3s)
+  srcnn step 500 loss 1.061e-02 (58s)
+  srcnn step 1000 loss 1.116e-02 (114s)
+  srcnn early-stopping: best val MSE 7.258e-03 at step 1500
+  vdsr step 0 loss 1.055e-02 (5s)
+  vdsr step 500 loss 9.743e-03 (158s)
+  vdsr step 1000 loss 9.908e-03 (316s)
+  vdsr early-stopping: best val MSE 6.347e-03 at step 1500
+  learned models fit in 885s; gammas [[1.1, 0.96, 0.34, 0.09, 0.01, 0.01], [1.01, 0.71, 0.37, 0.11, 0.01, 0.01]]
+  [0] VDSR:20.09 | CS-TV:19.49 | SRCNN:19.08 | PC-LSB:18.44 | Zero-fill / MAC:17.94 | LMMSE (learned linear):17.94 | Tikhonov:17.81 | Hann-filtered ZF:17.62 | CS-Wavelet:17.32
+  [60] VDSR:21.23 | CS-TV:21.07 | SRCNN:20.79 | PC-LSB:20.59 | LMMSE (learned linear):19.95 | Zero-fill / MAC:19.94 | Tikhonov:19.92 | Hann-filtered ZF:19.65 | CS-Wavelet:19.25
+  [120] VDSR:21.04 | CS-TV:20.85 | SRCNN:20.57 | PC-LSB:20.37 | LMMSE (learned linear):19.73 | Zero-fill / MAC:19.72 | Tikhonov:19.71 | Hann-filtered ZF:19.43 | CS-Wavelet:19.05
+  [180] VDSR:21.35 | CS-TV:21.32 | SRCNN:20.83 | PC-LSB:20.63 | LMMSE (learned linear):19.95 | Zero-fill / MAC:19.95 | Tikhonov:19.92 | Hann-filtered ZF:19.66 | CS-Wavelet:19.31
+                                q      ssim    cls_ok      time
+method                                                         
+VDSR                    21.278253  0.661190  0.500000  0.042798
+CS-TV                   21.172851  0.685860  0.416667  0.696654
+SRCNN                   20.775767  0.636772  0.462500  0.017658
+PC-LSB                  20.602112  0.626496  0.420833  0.324670
+LMMSE (learned linear)  19.973235  0.591734  0.441667  0.028407
+Zero-fill / MAC         19.970167  0.591664  0.450000  0.001339
+Tikhonov                19.950453  0.591698  0.425000  0.382660
+Hann-filtered ZF        19.679785  0.605070  0.412500  0.001555
+CS-Wavelet              19.320312  0.554584  0.404167  0.451206

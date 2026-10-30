@@ -1,0 +1,12 @@
+method
+MAC (RFT)                  23.679303
+PC-LSB                     26.080613
+VDSR                       26.391592
+VDSR + PC-LSB (plug-in)    26.591833
+Name: q, dtype: float64
+method
+MAC (RFT)                  27.810015
+VDSR                       33.084220
+PC-LSB                     33.330881
+VDSR + PC-LSB (plug-in)    33.444447
+Name: q, dtype: float64

@@ -1,0 +1,5 @@
+PC-LSB (full) 208s
+w/o frequency gate 162s
+w/o G-LSB consistency 208s
+w/o boosting (T=1) 106s
+w/o pattern anchors (K=1) 109s

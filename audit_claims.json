@@ -1,0 +1,140 @@
+{
+  "A1_rft_orthogonal": {
+    "claim": "G_m is orthogonal (G^-1 = G^T)",
+    "max_abs_dev_GGt_minus_I": {
+      "5": 2.220446049250313e-16,
+      "9": 6.661338147750939e-16,
+      "15": 1.003919254605709e-15,
+      "33": 2.3803258924271066e-15,
+      "129": 7.143091620164257e-15
+    },
+    "rft_equals_rescaled_rfft_maxerr": 3.1086244689504383e-15,
+    "verdict": "TRUE (orthogonal); but it is the classical real/trigonometric DFT (rescaled numpy.fft.rfft), so 'first construction' is not supported."
+  },
+  "A2_theorem1": {
+    "claim": "(1) any n columns of Phi_1 independent; (2) C_1 strictly equiangular, S_1 orthogonal",
+    "results": {
+      "5": {
+        "n": 3,
+        "subsets": 10,
+        "min_singular_value": 0.08156984250234525,
+        "coherence_values_C1": [
+          0.285714
+        ],
+        "S1_offdiag_max": 4.8075933490040024e-17
+      },
+      "7": {
+        "n": 4,
+        "subsets": 35,
+        "min_singular_value": 0.011716637030951105,
+        "coherence_values_C1": [
+          0.222222
+        ],
+        "S1_offdiag_max": 5.46853321953181e-17
+      },
+      "9": {
+        "n": 5,
+        "subsets": 126,
+        "min_singular_value": 0.0014953299850892898,
+        "coherence_values_C1": [
+          0.181818
+        ],
+        "S1_offdiag_max": 1.3382577579399727e-16
+      },
+      "11": {
+        "n": 6,
+        "subsets": 462,
+        "min_singular_value": 0.00017963789533278175,
+        "coherence_values_C1": [
+          0.153846
+        ],
+        "S1_offdiag_max": 2.108092956341493e-16
+      },
+      "13": {
+        "n": 7,
+        "subsets": 1716,
+        "min_singular_value": 2.0774278309086322e-05,
+        "coherence_values_C1": [
+          0.133333
+        ],
+        "S1_offdiag_max": 2.898030184357635e-16
+      }
+    },
+    "verdict": "Holds in exact arithmetic for every tested m (C_1 equiangular, S_1 orthogonal), BUT the smallest singular value over n-column subsets collapses roughly 10x per +2 in m (see min_singular_value), so 'maximal robustness' gives no numerical robustness to noise for realistic m."
+  },
+  "A4_orthogonal_system_theorem": {
+    "claim": "x* = C^+ d when the curtailed equations have zero constant terms",
+    "err_when_hypothesis_holds": 3.885780586188048e-16,
+    "err_when_two_curtailed_terms_nonzero": 0.6115533986500218,
+    "verdict": "TRUE but elementary: with orthogonal rows, A^-1 b = sum_i a_i b_i/|a_i|^2, so dropping rows with b_i = 0 changes nothing. Exactness needs the UNKNOWN coefficients to be zero, i.e. the signal must be exactly band/sparsity-limited."
+  },
+  "A5_hadamard_example": {
+    "claim": "x* recovered from 7 of 8 Hadamard equations by TV-minimising LP",
+    "Ax_star_equals_b": true,
+    "x_tv": [
+      2.0,
+      1.0,
+      1.0,
+      3.0,
+      1.0,
+      1.0,
+      0.0,
+      1.0
+    ],
+    "x_star": [
+      1.0,
+      0.0,
+      0.0,
+      2.0,
+      0.0,
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "TV(x_tv)": 7.0,
+    "TV(x_star)": 7.0,
+    "recovered": false,
+    "min_norm_solution_error": 0.7071067811865476,
+    "verdict": "NOT RECOVERED: the curtailed row is the constant (DC) row and TV is blind to constants, so x*+c is TV-minimal for every c; the LP returned x*+1 (same TV). The example is ill-posed."
+  },
+  "A6_h264_example": {
+    "Ax": [
+      0.0,
+      2.0,
+      3.0,
+      2.0
+    ],
+    "lsb_recovers_x": true,
+    "verdict": "TRUE (special case of A4)"
+  },
+  "A7_maximum_accuracy_theorem": {
+    "claim": "MAC attains the maximum accuracy that the samples can provide",
+    "l2_err_MAC": 1.2418081203216602,
+    "l2_err_linear_interp": 1.1188628531528284,
+    "samples_kept_intact_by_MAC": true,
+    "verdict": "FALSE as an optimality statement: the proof only restates Parseval (||x-x'|| = ||A x - A x'|| for ANY estimate x'); no minimisation over estimators is performed. Plain linear interpolation from the SAME samples is more accurate on this piecewise-smooth signal."
+  },
+  "A8_gibbs": {
+    "claim": "transform expression never fails, even for discontinuous f",
+    "overshoot_percent_of_jump_by_decimation": {
+      "2": 14.112900548077612,
+      "4": 14.568743348942226,
+      "8": 15.646851465439626,
+      "16": 17.738025601355133
+    },
+    "verdict": "FALSE pointwise: MAC rings at every jump (14-18% of the jump height here, above the 8.95% Gibbs limit of Fourier partial sums because of aliasing) and the overshoot does not vanish as the sampling rate changes."
+  },
+  "A9_40x_claim": {
+    "mse_ratio_per_image": {
+      "Lena": 40.17908108489398,
+      "Birds": 17.45822152920503,
+      "Fingerprint": 12.105981335504817
+    },
+    "verdict": "Arithmetic correct for Lena only (40.18x); the other images give 17.5x and 12.1x. The CNN numbers (ReconNet, CVPR'16) come from random Gaussian block projections, a different measurement model, so the comparison is not like-for-like."
+  },
+  "A10_lsb_point_samples": {
+    "claim": "LSB x*=C^+d applied to the partial system obtained by keeping time samples",
+    "reconstruction_off_sample_values_maxabs": 3.2054863534865733e-15,
+    "verdict": "Literal LSB on time-sample curtailment returns the ZERO-FILLED signal (min-norm coefficients <=> min-norm signal for orthogonal A). The working MAC must therefore be spectral zero-padding (trigonometric interpolation)."
+  }
+}

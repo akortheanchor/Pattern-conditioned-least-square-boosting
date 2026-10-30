@@ -1,0 +1,187 @@
+=== us r=2 (rate 0.2500) train=960 val=156 test=246 p=7
+  LMMSE fit 3.1s
+  SRCNN loaded from checkpoint
+  SRCNN fit 0.1s
+  VDSR loaded from checkpoint
+  VDSR fit 0.0s
+  PC-LSB seed 0 fit 232.7s gammas=[[0.55, 0.85, 0.94, 0.7, 0.28, 0.01], [0.25, 0.41, 0.55, 0.32, 0.17, 0.02]] cal=0.628 anchor=mac
+  PC-LSB seed 1 fit 218.5s gammas=[[0.55, 0.85, 0.94, 0.73, 0.27, 0.01], [0.18, 0.37, 0.55, 0.32, 0.18, 0.02]] cal=0.631 anchor=mac
+  PC-LSB seed 2 fit 217.2s gammas=[[0.54, 0.86, 0.95, 0.72, 0.29, 0.0], [0.27, 0.35, 0.55, 0.34, 0.16, 0.01]] cal=0.647 anchor=mac
+  [0/246] VDSR:29.11 | PC-LSB:29.03 | Linear:28.89 | SRCNN:28.88 | Tikhonov:28.81 | Cubic spline:28.49 | Lanczos-3:28.39 | CS-TV:27.96 | LMMSE (learned linear):26.90 | OMP-DCT:26.38 | MAC (RFT):25.99 | Nearest:25.83 | CS-Wavelet:25.39 | Zero-fill:9.56
+  [50/246] VDSR:31.42 | PC-LSB:31.35 | SRCNN:31.29 | Tikhonov:31.23 | Linear:31.04 | Cubic spline:31.04 | Lanczos-3:31.00 | LMMSE (learned linear):29.05 | CS-TV:28.99 | MAC (RFT):28.17 | OMP-DCT:27.41 | Nearest:26.98 | CS-Wavelet:26.00 | Zero-fill:10.07
+  [100/246] VDSR:31.36 | PC-LSB:31.27 | SRCNN:31.16 | Tikhonov:31.09 | Linear:30.99 | Cubic spline:30.84 | Lanczos-3:30.80 | CS-TV:29.04 | LMMSE (learned linear):28.93 | MAC (RFT):28.02 | OMP-DCT:27.56 | Nearest:26.87 | CS-Wavelet:26.14 | Zero-fill:10.71
+  [150/246] VDSR:32.16 | PC-LSB:32.10 | SRCNN:31.98 | Tikhonov:31.94 | Linear:31.78 | Cubic spline:31.67 | Lanczos-3:31.66 | CS-TV:29.76 | LMMSE (learned linear):29.16 | OMP-DCT:28.28 | MAC (RFT):28.17 | Nearest:27.54 | CS-Wavelet:26.53 | Zero-fill:10.78
+  [200/246] VDSR:32.08 | PC-LSB:32.03 | SRCNN:31.90 | Tikhonov:31.85 | Linear:31.73 | Cubic spline:31.57 | Lanczos-3:31.56 | CS-TV:29.83 | LMMSE (learned linear):29.06 | OMP-DCT:28.40 | MAC (RFT):28.04 | Nearest:27.58 | CS-Wavelet:26.56 | Zero-fill:10.69
+                                q      time
+method                                     
+VDSR                    32.137354  0.029442
+PC-LSB                  32.079872  0.209670
+SRCNN                   31.957794  0.013296
+Tikhonov                31.922392  0.054877
+Linear                  31.778291  0.007453
+Cubic spline            31.641241  0.003288
+Lanczos-3               31.632429  0.007953
+CS-TV                   29.869712  0.159040
+LMMSE (learned linear)  29.143420  0.009676
+OMP-DCT                 28.423537  1.987801
+MAC (RFT)               28.123661  0.000717
+Nearest                 27.586064  0.007781
+CS-Wavelet              26.585142  0.169238
+Zero-fill               10.612903  0.000022
+=== us r=4 (rate 0.0625) train=960 val=156 test=246 p=7
+  LMMSE fit 3.5s
+  srcnn step 0 loss 1.226e-02 (3s)
+  srcnn step 500 loss 1.398e-03 (53s)
+  srcnn step 1000 loss 2.598e-03 (101s)
+  srcnn step 1500 loss 2.983e-03 (152s)
+  srcnn early-stopping: best val MSE 1.613e-03 at step 1500
+  SRCNN fit 203.9s
+  vdsr step 0 loss 1.853e-03 (5s)
+  vdsr step 500 loss 1.395e-03 (154s)
+  vdsr step 1000 loss 2.484e-03 (303s)
+  vdsr step 1500 loss 2.950e-03 (450s)
+  vdsr early-stopping: best val MSE 1.590e-03 at step 1750
+  VDSR fit 600.4s
+  PC-LSB seed 0 fit 206.8s gammas=[[0.84, 0.95, 0.59, 0.28, 0.08, 0.0], [0.34, 0.43, 0.31, 0.18, 0.07, 0.01]] cal=0.477 anchor=mac
+  PC-LSB seed 1 fit 213.9s gammas=[[0.85, 0.97, 0.6, 0.3, 0.08, 0.0], [0.28, 0.45, 0.3, 0.15, 0.07, 0.02]] cal=0.478 anchor=mac
+  PC-LSB seed 2 fit 218.6s gammas=[[0.85, 0.95, 0.61, 0.3, 0.08, 0.0], [0.35, 0.53, 0.3, 0.16, 0.06, 0.02]] cal=0.465 anchor=mac
+  [0/246] PC-LSB:25.28 | VDSR:25.24 | SRCNN:25.21 | Linear:25.02 | Tikhonov:24.75 | Cubic spline:24.39 | Lanczos-3:24.30 | CS-TV:23.88 | LMMSE (learned linear):23.46 | OMP-DCT:23.30 | Nearest:23.25 | CS-Wavelet:22.59 | MAC (RFT):21.97 | Zero-fill:8.59
+  [50/246] PC-LSB:26.12 | VDSR:26.00 | Linear:26.00 | SRCNN:25.96 | Tikhonov:25.87 | Lanczos-3:25.52 | Cubic spline:25.46 | LMMSE (learned linear):24.47 | Nearest:23.69 | MAC (RFT):23.05 | CS-TV:22.75 | CS-Wavelet:22.71 | OMP-DCT:22.64 | Zero-fill:9.10
+  [100/246] PC-LSB:26.12 | VDSR:26.07 | SRCNN:26.03 | Linear:26.00 | Tikhonov:25.86 | Lanczos-3:25.52 | Cubic spline:25.51 | LMMSE (learned linear):24.46 | Nearest:23.67 | MAC (RFT):23.04 | CS-Wavelet:22.77 | CS-TV:22.74 | OMP-DCT:22.59 | Zero-fill:9.74
+  [150/246] PC-LSB:26.85 | VDSR:26.78 | SRCNN:26.73 | Linear:26.73 | Tikhonov:26.62 | Lanczos-3:26.27 | Cubic spline:26.23 | LMMSE (learned linear):24.67 | Nearest:24.27 | CS-TV:23.43 | OMP-DCT:23.16 | MAC (RFT):23.11 | CS-Wavelet:22.95 | Zero-fill:9.81
+  [200/246] PC-LSB:26.92 | VDSR:26.83 | SRCNN:26.79 | Linear:26.79 | Tikhonov:26.67 | Lanczos-3:26.30 | Cubic spline:26.26 | LMMSE (learned linear):24.64 | Nearest:24.35 | CS-TV:23.60 | OMP-DCT:23.30 | MAC (RFT):23.04 | CS-Wavelet:22.97 | Zero-fill:9.72
+                                q      time
+method                                     
+PC-LSB                  26.952021  0.233023
+VDSR                    26.877311  0.036412
+SRCNN                   26.828085  0.016354
+Linear                  26.819267  0.008652
+Tikhonov                26.701231  0.146229
+Lanczos-3               26.334784  0.008761
+Cubic spline            26.297619  0.003599
+LMMSE (learned linear)  24.708486  0.015492
+Nearest                 24.344175  0.008397
+CS-TV                   23.587605  0.154509
+OMP-DCT                 23.264323  0.154554
+MAC (RFT)               23.108353  0.000727
+CS-Wavelet              23.012779  0.178213
+Zero-fill                9.638704  0.000034
+PC-LSB (full) 208s
+w/o frequency gate 169s
+w/o G-LSB consistency 212s
+w/o boosting (T=1) 109s
+w/o pattern anchors (K=1) 121s
+w/o boundary-aware anchor 257s
+T=3 stages 291s
+variant
+MAC + mirror (no learning)    18.164034
+MAC (RFT)                     18.275305
+w/o pattern anchors (K=1)     19.311078
+w/o frequency gate            19.613046
+w/o boosting (T=1)            19.676918
+w/o G-LSB consistency         19.798772
+PC-LSB (full)                 19.815878
+T=3 stages                    19.876459
+w/o boundary-aware anchor     19.907683
+Name: q, dtype: float64
+Traceback (most recent call last):
+  File "/home/claude/pclsb/src/run_extra.py", line 149, in <module>
+    globals()[cmd](sys.argv[2], int(sys.argv[3]))
+    ~~~~~~~~~^^^^^
+KeyError: 'plugin'
+SNR inf: noise-aware mu=1.0
+method
+CS-TV                     22.793196
+MAC (RFT)                 23.953324
+Cubic spline              24.924029
+PC-LSB (noise-aware)      26.311358
+PC-LSB (clean-trained)    26.429288
+VDSR                      26.680929
+Name: q, dtype: float64
+SNR 40: noise-aware mu=1.0
+method
+CS-TV                     22.791316
+MAC (RFT)                 23.945079
+Cubic spline              24.915879
+PC-LSB (noise-aware)      26.287459
+PC-LSB (clean-trained)    26.420715
+VDSR                      26.670318
+Name: q, dtype: float64
+SNR 30: noise-aware mu=1.0
+method
+CS-TV                     22.770076
+MAC (RFT)                 23.872974
+Cubic spline              24.845072
+PC-LSB (noise-aware)      26.128433
+PC-LSB (clean-trained)    26.342708
+VDSR                      26.579745
+Name: q, dtype: float64
+SNR 20: noise-aware mu=0.5
+method
+CS-TV                     22.553984
+MAC (RFT)                 23.228802
+Cubic spline              24.213031
+PC-LSB (noise-aware)      25.284868
+PC-LSB (clean-trained)    25.647432
+VDSR                      25.802472
+Name: q, dtype: float64
+SNR inf: noise-aware mu=0.75
+Traceback (most recent call last):
+  File "/home/claude/pclsb/src/run_extra.py", line 171, in <module>
+    globals()[cmd](sys.argv[2], int(sys.argv[3]))
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/claude/pclsb/src/run_extra.py", line 80, in noise
+    rows.append(dict(snr=snr, method=k, idx=i, **metrics(x, v, nd)))
+                ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: dict() got multiple values for keyword argument 'snr'
+PC-LSB (full) 93s
+w/o frequency gate 84s
+w/o G-LSB consistency 96s
+w/o boosting (T=1) 54s
+w/o pattern anchors (K=1) 19s
+w/o boundary-aware anchor 99s
+T=3 stages 144s
+variant
+MAC (RFT)                     3.203036
+MAC + mirror (no learning)    3.220604
+w/o boosting (T=1)            4.527239
+w/o pattern anchors (K=1)     4.547107
+PC-LSB (full)                 4.582954
+w/o G-LSB consistency         4.585384
+w/o frequency gate            4.591963
+w/o boundary-aware anchor     4.599264
+T=3 stages                    4.618646
+Name: q, dtype: float64
+25 {'PC-LSB': 19.309387128853214, 'VDSR': 19.610843293429586}
+50 {'PC-LSB': 19.520292955505276, 'VDSR': 19.64550300893224}
+100 {'PC-LSB': 19.6351198976183, 'VDSR': 19.697758186637216}
+200 {'PC-LSB': 19.60849286838915, 'VDSR': 19.69686280534636}
+400 {'PC-LSB': 19.630092906712754, 'VDSR': 19.694491255693595}
+mri 2
+mri 4
+cxr 2
+cxr 4
+us 2
+us 4
+method       CS-TV  Cubic spline  MAC (RFT)  PC-LSB  PC-LSB+BS   VDSR
+src tgt   r                                                          
+cxr cxr   2    NaN         32.35      27.74   33.17        NaN  32.95
+          4    NaN         26.63      22.75   27.42        NaN  26.99
+    mri   2    NaN         24.35      23.43   25.24        NaN  24.95
+          4    NaN         18.40      17.85   18.95        NaN  18.83
+    us    2    NaN         30.90      27.93   31.31        NaN  31.28
+          4    NaN         25.48      22.88   26.09        NaN  25.90
+ecg mitdb 2  12.67         13.44      12.42   14.25      15.22  13.28
+          4   3.74          3.71       2.86    4.05       3.50   3.68
+mri cxr   2    NaN         32.35      27.74   32.92        NaN  32.88
+          4    NaN         26.63      22.75   27.12        NaN  26.76
+    mri   2    NaN         24.35      23.43   25.82        NaN  26.13
+          4    NaN         18.40      17.85   19.37        NaN  19.53
+    us    2    NaN         30.90      27.93   31.28        NaN  31.40
+          4    NaN         25.48      22.88   26.05        NaN  25.91
+us  cxr   2    NaN         32.35      27.74   32.87        NaN  32.69
+          4    NaN         26.63      22.75   27.18        NaN  26.59
+    mri   2    NaN         24.35      23.43   24.66        NaN  24.73
+          4    NaN         18.40      17.85   18.78        NaN  18.77
+    us    2    NaN         30.90      27.93   31.35        NaN  31.44
+          4    NaN         25.48      22.88   26.13        NaN  26.08

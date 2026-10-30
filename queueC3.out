@@ -1,0 +1,36 @@
+SNR inf: noise-aware mu=0.75
+method
+MAC (RFT)                 5.951477
+CS-TV                     6.755855
+VDSR                      6.914612
+Cubic spline              6.935452
+PC-LSB (clean-trained)    7.310667
+PC-LSB (noise-aware)      7.314566
+Name: q, dtype: float64
+SNR 40: noise-aware mu=0.75
+method
+MAC (RFT)                 5.949825
+CS-TV                     6.753177
+VDSR                      6.912490
+Cubic spline              6.933281
+PC-LSB (noise-aware)      7.203525
+PC-LSB (clean-trained)    7.305752
+Name: q, dtype: float64
+SNR 30: noise-aware mu=0.25
+method
+MAC (RFT)                 5.934305
+CS-TV                     6.738313
+VDSR                      6.894939
+Cubic spline              6.915321
+PC-LSB (noise-aware)      7.206051
+PC-LSB (clean-trained)    7.286131
+Name: q, dtype: float64
+SNR 20: noise-aware mu=0.5
+method
+MAC (RFT)                 5.780983
+CS-TV                     6.602557
+VDSR                      6.725980
+Cubic spline              6.743361
+PC-LSB (noise-aware)      7.028657
+PC-LSB (clean-trained)    7.106504
+Name: q, dtype: float64
